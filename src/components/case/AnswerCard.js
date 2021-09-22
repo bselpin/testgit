@@ -15,7 +15,7 @@ const AnswerCard = ({ answer }) => {
 		pttnCd,
 	} = answer
 
-	console.log(answer)
+	console.log(answer, "test")
 
 	const toDetailUrl = category => {
 		if (category && category !== "undefined" && category !== "13") {
