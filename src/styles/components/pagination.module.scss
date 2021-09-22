@@ -1,0 +1,49 @@
+@import "src/styles/Variable.scss";
+
+.pagination_box {
+	margin: 2rem auto 4rem;
+	width: 100%;
+
+	@include MOBILE {
+		margin: 2.5rem auto 5rem;
+	}
+}
+
+.pagination {
+	width: 27rem;
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+
+	@include MOBILE {
+		width: 100%;
+	}
+}
+
+.page_btn {
+	font-size: 1.2rem;
+	color: $gray3;
+	font-weight: 300;
+	padding: 0 0.8rem;
+
+	@include MOBILE {
+		padding: 0 0.4rem;
+	}
+
+	&.active {
+		color: $main;
+		font-weight: 500;
+	}
+}
+
+.page_move_btn {
+	color: $gray3;
+	display: inline-block;
+	margin: 0 0.8rem;
+	transform: translateY(-0.1rem);
+	font-size: 0.85rem;
+
+	@include MOBILE {
+		margin: 0 0.4rem;
+	}
+}

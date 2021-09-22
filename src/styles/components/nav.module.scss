@@ -1,0 +1,294 @@
+@import "src/styles/Variable.scss";
+
+.nav {
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	height: 4.4rem;
+	background: #fff;
+	z-index: 99;
+	border-top: 1px solid $gray2;
+
+	&.hidden {
+		display: none;
+		visibility: hidden;
+	}
+
+	@include MOBILE {
+		height: 3.7rem;
+	}
+}
+
+.nav_box {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.nav_btn {
+	width: 25%;
+	text-align: center;
+	padding-top: 0.25rem;
+
+	@include MOBILE {
+		padding-top: 0.1rem;
+	}
+
+	p {
+		font-size: 0.75rem;
+		font-weight: 400;
+		margin-top: -0.3rem;
+
+		&.active {
+			color: $main;
+			font-weight: 600;
+		}
+	}
+
+	a {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.nav_icon {
+		$size: 2.5rem;
+		width: $size;
+		height: $size;
+		background: url("/icons/nav_icon.svg") center top no-repeat;
+		background-size: $size * 5;
+
+		&.menu {
+			background-position: 0 0;
+		}
+
+		&.home {
+			background-position: -$size 0;
+
+			&.active {
+				background-position: -$size bottom;
+			}
+		}
+
+		&.info {
+			background-position: -$size * 2 0;
+
+			&.active {
+				background-position: -$size * 2 bottom;
+			}
+		}
+
+		&.case {
+			background-position: -$size * 3 0;
+
+			&.active {
+				background-position: -$size * 3 bottom;
+			}
+		}
+
+		&.mypage {
+			background-position: -$size * 4 0;
+
+			&.active {
+				background-position: -$size * 4 bottom;
+			}
+		}
+
+		@include MOBILE {
+			$size: 2.25rem;
+			width: $size;
+			height: $size;
+			background-size: $size * 5;
+
+			&.home {
+				background-position: -$size 0;
+
+				&.active {
+					background-position: -$size bottom;
+				}
+			}
+
+			&.info {
+				background-position: -$size * 2 0;
+
+				&.active {
+					background-position: -$size * 2 bottom;
+				}
+			}
+
+			&.case {
+				background-position: -$size * 3 0;
+
+				&.active {
+					background-position: -$size * 3 bottom;
+				}
+			}
+
+			&.mypage {
+				background-position: -$size * 4 0;
+
+				&.active {
+					background-position: -$size * 4 bottom;
+				}
+			}
+		}
+	}
+}
+
+.menu_wrap {
+	position: fixed;
+	width: 100vw;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	opacity: 0;
+	transition: opacity 0.16s;
+
+	&.active {
+		z-index: 999;
+		opacity: 1;
+
+		.menu_box {
+			opacity: 1;
+			transform: translate3d(0, 0, 0);
+		}
+	}
+
+	.menu_box {
+		$menuSize: 22rem;
+		position: fixed;
+		height: 100%;
+		background: #fff;
+		z-index: 999;
+		width: $menuSize;
+		transform: translate3d(-$menuSize, 0, 0);
+		opacity: 0;
+		transition: all 0.2s;
+		padding: 2.75rem;
+
+		@include MOBILE {
+			width: 80vw;
+			padding: 2rem 1.65rem;
+			transform: translate3d(-75vw, 0, 0);
+		}
+	}
+
+	.close_btn {
+		@include closeBtn(1.15rem, 1.25rem);
+	}
+
+	.logo {
+		position: absolute;
+		width: 2rem;
+		top: 1.25rem;
+		left: 1.4rem;
+	}
+
+	.menu_bg {
+		position: fixed;
+		width: 100vw;
+		height: 100vh;
+		background: $backOpacity;
+		top: 0;
+		left: 0;
+	}
+}
+
+.menu_header {
+	padding: 1rem 0 1.5rem;
+	border-bottom: 1px solid $gray2;
+
+	p {
+		font-size: 0.8rem;
+	}
+
+	a {
+		width: 100%;
+		display: block;
+		text-align: center;
+		margin-top: 0.5rem;
+		background: #fff;
+		border: 1px solid $main;
+		color: $main;
+		padding: 0.75rem;
+		border-radius: 0.5rem;
+		font-weight: 500;
+	}
+}
+
+.menu_nav_wrap {
+	width: 100%;
+	height: 100vh;
+
+	.menu_nav {
+		a {
+			display: block;
+			font-size: 1rem;
+
+			&:hover {
+				font-weight: 600;
+				color: $main;
+			}
+		}
+	}
+
+	.counsel_link {
+		padding: 1.25rem 0;
+		border-bottom: 1px solid $gray2;
+	}
+
+	.nav_link {
+		padding: 0.75rem 0;
+		border-bottom: 1px solid $gray2;
+
+		&.none_border {
+			border: none;
+		}
+	}
+
+	.link {
+		padding: 0.75rem 0;
+	}
+
+	.link_biz {
+		padding: 0.75rem 0;
+		font-size: 0.8rem;
+		font-weight: 500;
+		color: $main;
+
+		a {
+			font-size: 0.8rem;
+		}
+	}
+
+	.footer {
+		position: absolute;
+		bottom: 2.25rem;
+		left: 2.75rem;
+		font-size: 0.8rem;
+		color: $gray3;
+
+		a {
+			padding: 0.45rem 0;
+			display: block;
+
+			&:hover {
+				color: $gray4;
+			}
+		}
+
+		@include MOBILE {
+			left: 1.65rem;
+			bottom: 1.8rem;
+
+			a {
+				padding: 0.55rem 0;
+			}
+		}
+	}
+}

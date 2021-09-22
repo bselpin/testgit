@@ -1,0 +1,439 @@
+@import "Variable.scss";
+
+.counsel_wrap {
+	padding: 4rem 1rem 0;
+
+	.section {
+		padding-bottom: 5rem;
+
+		@include MOBILE {
+			padding-bottom: 4rem;
+		}
+	}
+
+	.title {
+		font-family: $gsans;
+		line-height: 1.3;
+		font-size: 2.3rem;
+		font-weight: 500;
+		margin-top: 2rem;
+
+		span {
+			font-weight: 700;
+		}
+
+		strong {
+			font-weight: 700;
+			color: $main;
+			position: relative;
+			z-index: 1;
+
+			&.green {
+				color: $green;
+			}
+		}
+	}
+
+	.counsel_main {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		@include MOBILE {
+			display: block;
+		}
+	}
+
+	.counsel_bg {
+		width: 17rem;
+		height: 17rem;
+		background: url("/img/counsel_tel.svg") center center no-repeat;
+		background-size: contain;
+
+		@include MOBILE {
+			width: 97%;
+			height: 14rem;
+			background-position: right center;
+			background-size: 65vw;
+		}
+	}
+
+	.counsel_img {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	.counsel_info {
+		line-height: 1.5;
+		text-align: center;
+		color: $gray4;
+		margin-top: 2.5rem;
+
+		@include MOBILE {
+			margin-top: 0;
+		}
+	}
+
+	.down_arrow {
+		width: 5rem;
+		height: 5rem;
+		background: url("/icons/down.svg") center center no-repeat;
+		background-size: cover;
+		margin: 1rem auto 0;
+
+		@include MOBILE {
+			margin: 0 auto;
+		}
+	}
+
+	.counsel_detail {
+		width: 100%;
+		border-top: 1px solid $gray2;
+		padding: 1rem 0 3rem;
+
+		&.last {
+			padding-bottom: 6rem;
+		}
+
+		@include MOBILE {
+			padding: 2rem 0;
+		}
+	}
+
+	.detail_title {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.detail_text {
+		width: 50%;
+		font-family: $gsans;
+		line-height: 1.35;
+		font-size: 2rem;
+
+		@include MOBILE {
+			font-size: 1.35rem;
+		}
+
+		span {
+			font-weight: 700;
+		}
+
+		.red {
+			color: rgb(248, 65, 19);
+		}
+
+		.green {
+			color: $green;
+		}
+
+		.blue {
+			color: $main;
+		}
+	}
+
+	.detail_icon {
+		margin-right: 2.5rem;
+		$size: 15rem;
+		width: $size;
+		height: 11rem;
+		background: url("/icons/counsel_tel_a_icon.svg") 0 center no-repeat;
+		background-size: $size * 3;
+
+		&.second {
+			background-position: -$size center;
+		}
+
+		&.third {
+			background-position: -$size * 2 center;
+		}
+
+		@include MOBILE {
+			$size: 9rem;
+			width: $size;
+			margin-right: 0;
+			height: 6rem;
+			background-size: $size * 3;
+
+			&.second {
+				background-position: -$size center;
+			}
+
+			&.third {
+				background-position: -$size * 2 center;
+			}
+		}
+	}
+
+	.detail_info {
+		font-size: 1.1rem;
+		line-height: 1.5;
+
+		@include MOBILE {
+			font-size: 0.9rem;
+			margin-top: 1rem;
+		}
+	}
+}
+
+.button_fixed {
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	z-index: 99;
+	transition: all 0.85s $ease;
+	opacity: 0.75;
+	transform: translate3d(0, 7rem, 0);
+
+	&.active {
+		transform: translate3d(0, 0, 0);
+		opacity: 1;
+	}
+
+	.button_wrap {
+		padding: 1rem;
+		border-top-left-radius: 0.75rem;
+		border-top-right-radius: 0.75rem;
+		box-shadow: 0 -0.35rem 0.75rem $shadow;
+		background: #fff;
+
+		.counsel_btn {
+			@include button;
+			width: 100%;
+			text-align: center;
+			background: $green;
+
+			&:hover {
+				background: $green;
+				opacity: 0.8;
+			}
+		}
+	}
+}
+
+.counsel_wrap_other {
+	padding-top: 5rem;
+
+	.section {
+		padding: 2rem 0 0;
+		border-bottom: 1px solid $gray2;
+	}
+
+	.title {
+		font-family: $gsans;
+		text-align: center;
+		font-size: 2rem;
+
+		strong {
+			font-size: 2.45rem;
+			color: $main;
+
+			&.green {
+				color: $green;
+			}
+		}
+	}
+
+	.bg {
+		width: 50vw;
+		height: 10rem;
+		background: url("/img/counsel_tel.svg") center center no-repeat;
+		margin: 2rem auto;
+	}
+
+	.text {
+		text-align: center;
+		line-height: 1.4;
+		font-weight: 300;
+		color: $gray5;
+
+		span {
+			font-weight: 500;
+		}
+	}
+
+	.info_section {
+		margin-top: 2rem;
+		border-top: 1px solid $gray2;
+		padding: 2rem 1rem 2.5rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.icon {
+			$size: 5rem;
+			width: $size;
+			height: $size;
+			background: url("/icons/counsel_tel_b_icon.svg") 0 center no-repeat;
+			background-size: $size * 3;
+			margin: 0.5rem auto;
+
+			&.second {
+				background-position: -$size 0;
+			}
+
+			&.third {
+				background-position: -$size * 2 0;
+			}
+		}
+
+		.info_box {
+			width: 33.33%;
+			text-align: center;
+			font-family: $gsans;
+		}
+
+		.info_text {
+			line-height: 1.45;
+			span {
+				font-weight: 700;
+			}
+
+			.red {
+				color: rgb(248, 65, 19);
+			}
+
+			.blue {
+				color: $main;
+			}
+
+			.green {
+				color: $green;
+			}
+		}
+	}
+
+	.detail_section {
+		background: $gray;
+		padding: 1.5rem;
+		padding-bottom: 4rem;
+		color: $gray5;
+
+		&.last {
+			padding-bottom: 8rem;
+		}
+	}
+
+	.detail_title {
+		font-weight: 500;
+		margin-bottom: 0.5rem;
+		border-bottom: 1px solid $gray3;
+		padding-bottom: 0.5rem;
+	}
+
+	.detail_text {
+		font-weight: 400;
+		font-size: 0.85rem;
+		margin-top: 0.25rem;
+		letter-spacing: 0;
+	}
+}
+
+.write_wrap {
+	padding: 0 1rem;
+	padding-top: 3.75rem;
+
+	.info {
+		color: $gray3;
+		font-weight: 500;
+	}
+
+	.button_wrap {
+		position: fixed;
+		width: 100%;
+		bottom: 1rem;
+		left: 0;
+		transition: transform 0.3s;
+
+		transform: translate3d(0, 0, 0);
+
+		&.hide {
+			@include MOBILE {
+				transform: translate3d(0, 7rem, 0);
+			}
+		}
+	}
+
+	.input,
+	.textarea {
+		border: none;
+		border-bottom: 1px solid $gray3;
+		border-radius: 0;
+		padding: 0.5rem 0;
+		font-size: 1rem;
+		height: auto;
+		margin-top: 0.75rem;
+
+		&:focus {
+			border-color: $main;
+		}
+	}
+
+	.textarea {
+		height: 15rem;
+	}
+
+	button {
+		width: 100%;
+	}
+}
+
+.agree_box {
+	width: 100%;
+	padding: 0rem 0 1rem;
+	font-size: 1.2rem;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+
+	p {
+		font-size: 1.1rem;
+	}
+
+	.indicator {
+		width: 1.75rem;
+		height: 1.75rem;
+		background: $gray2;
+		border-radius: 0.5rem;
+		position: relative;
+		cursor: pointer;
+		margin-right: 0.75rem;
+
+		&:after {
+			@include psuedo;
+			width: 0.7rem;
+			height: 1.55rem;
+			border: 0.3rem solid #fff;
+			border-left: none;
+			border-top: none;
+			transform: rotate(45deg);
+			left: 0.65rem;
+			bottom: 0.35rem;
+		}
+
+		&.active {
+			background: $main;
+		}
+	}
+}
+
+.tel_info {
+	padding: 1.5rem;
+	background: $gray;
+	margin-bottom: 6rem;
+	border-radius: 1rem;
+	color: $gray5;
+	font-weight: 500;
+}
+
+.tel_info_b {
+	border-top: 1px solid $gray2;
+	margin-top: 0.75rem;
+	padding-top: 0.75rem;
+	padding-bottom: 2rem;
+	font-size: 0.8rem;
+	color: $gray5;
+	font-weight: 500;
+}

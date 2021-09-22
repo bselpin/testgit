@@ -1,0 +1,51 @@
+@import "src/styles/Variable.scss";
+
+.tooltip_icon {
+	width: 1.45rem;
+	height: 1.45rem;
+	background: url("/icons/tooltip.svg") center no-repeat;
+	background-size: contain;
+	display: inline-block;
+	margin-left: 0.2rem;
+	opacity: 0.35;
+	transform: translate3d(0, 0.25rem, 0);
+}
+
+.tooltip_box {
+	background: #fff !important;
+	box-shadow: 0 0.2rem 0.75rem $shadow;
+	color: $black !important;
+	font-weight: 400 !important;
+	opacity: 1 !important;
+	max-width: 95vw !important;
+	border: 1px solid $gray3 !important;
+	border-radius: 0.5rem !important;
+	padding: 0.65rem 0.85rem !important;
+
+	&:after {
+		display: none !important;
+		border: transparent !important;
+	}
+}
+
+.tooltip_info_wrap {
+	p {
+		font-size: 0.85rem;
+	}
+	.title {
+		font-size: 1rem;
+		font-weight: 700;
+	}
+
+	.tooltip_section {
+		margin-top: 0.35rem;
+	}
+
+	.label {
+		font-weight: 600;
+	}
+
+	strong {
+		opacity: 0.85;
+	}
+}

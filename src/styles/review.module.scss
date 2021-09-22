@@ -1,0 +1,340 @@
+@import "Variable.scss";
+
+.review_wrap {
+	margin-top: $headerSize;
+}
+
+.case_wrap {
+	margin-top: $headerSize;
+
+	@include MOBILE {
+		padding: 0 1rem;
+	}
+}
+
+.summary_box {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	padding: 0 3rem 1.5rem;
+	border-bottom: 1px solid $gray2;
+
+	@include MOBILE {
+		padding: 0 1rem 1.5rem;
+	}
+}
+
+.star_wrap {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 40%;
+	text-align: center;
+
+	.point {
+		font-weight: 500;
+		font-size: 2.5rem;
+
+		@include MOBILE {
+			font-size: 2.25rem;
+		}
+	}
+}
+
+.gauge_wrap {
+	width: 60%;
+	display: flex;
+	padding: 0 2.5rem 0 0.5rem;
+
+	@include MOBILE {
+		padding: 0.2rem 0.75rem;
+	}
+}
+
+.gauge_box {
+	width: 20%;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	.percent {
+		font-size: 0.8rem;
+		color: $gray3;
+		margin-bottom: 0.5rem;
+	}
+}
+
+.gauge_bg {
+	width: 0.35rem;
+	background: $gray2;
+	height: 2.75rem;
+	border-top-left-radius: 1rem;
+	border-top-right-radius: 1rem;
+	position: relative;
+
+	@include MOBILE {
+		height: 2.2rem;
+	}
+
+	.gauge {
+		background: $main;
+		width: 0.35rem;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		border-top-left-radius: 1rem;
+		border-top-right-radius: 1rem;
+	}
+}
+
+.gauge_point {
+	font-size: 0.8rem;
+	margin-top: 0.25rem;
+}
+
+.star_box {
+	@include starPoint(8rem);
+
+	@include MOBILE {
+		@include starPoint(7rem);
+	}
+}
+
+.review_list_wrap {
+	padding: 0 1rem 8rem;
+}
+
+.review_list {
+	padding: 1rem 0 1.5rem;
+	border-bottom: 1px solid $gray2;
+	display: block;
+
+	&:last-child {
+		border: none;
+	}
+}
+
+.review_header {
+	display: flex;
+	align-items: center;
+
+	.user_name {
+		font-family: $gsans;
+		padding-top: 0.3rem;
+		margin-right: 0.45rem;
+		font-size: 1.2rem;
+
+		@include MOBILE {
+			padding-top: 0;
+		}
+	}
+
+	.point {
+		font-weight: 500;
+		margin-left: 0.1rem;
+
+		@include MOBILE {
+			padding-top: 0.25rem;
+		}
+	}
+
+	.time {
+		font-size: 0.85rem;
+		color: $gray4;
+		margin-left: 0.3rem;
+
+		@include MOBILE {
+			padding-top: 0.25rem;
+		}
+	}
+
+	.star {
+		width: 1.2rem;
+		height: 1.2rem;
+		background: url("/icons/star_is.svg") center center no-repeat;
+	}
+}
+
+.review_text {
+	line-height: 1.7;
+	font-size: 0.95rem;
+	margin-top: 0.2rem;
+	white-space: pre-wrap;
+	padding-right: 3rem;
+	word-break: break-all;
+	width: 90%;
+
+	@include MOBILE {
+		font-size: 1rem;
+		padding-right: 1rem;
+		width: 94%;
+	}
+}
+
+.review_write_wrap {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	border-top: 1px solid $gray2;
+	text-align: center;
+	padding: 1rem 0;
+	z-index: 50;
+	background: #fff;
+
+	.info {
+		font-size: 0.8rem;
+		color: $gray4;
+	}
+
+	.write_btn {
+		background: $main;
+		border-radius: 0.3rem;
+		font-size: 0.85rem;
+		color: #fff;
+		padding: 0.35rem 0.75rem;
+		margin-left: 0.75rem;
+	}
+}
+
+$pointSize: 3rem;
+
+.write_wrap {
+	margin-top: 6rem;
+}
+
+.point_wrap {
+	width: 7rem;
+	padding-top: 0.5rem;
+}
+
+.rating {
+	text-align: center;
+	font-size: 0.8rem;
+}
+
+.point_box {
+	width: 100%;
+	height: $pointSize;
+	overflow: hidden;
+}
+
+.number_position {
+	transition: transform 0.3s $ease;
+
+	&.one {
+		transform: translate3D(0, (-$pointSize * 4), 0);
+	}
+
+	&.two {
+		transform: translate3D(0, (-$pointSize * 3), 0);
+	}
+
+	&.three {
+		transform: translate3D(0, (-$pointSize * 2), 0);
+	}
+
+	&.four {
+		transform: translate3D(0, (-$pointSize * 1), 0);
+	}
+
+	&.five {
+		transform: translate3D(0, 0, 0);
+	}
+
+	&.zero {
+		transform: translate3D(0, (-$pointSize * 5), 0);
+	}
+
+	li {
+		height: $pointSize;
+		line-height: $pointSize;
+		text-align: center;
+		font-size: 2rem;
+	}
+
+	.zero {
+		color: $gray4;
+	}
+}
+
+.star_point_wrap {
+	padding: 0 1rem;
+	padding-right: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	input {
+		display: none;
+	}
+
+	$starSize: 2rem;
+
+	.star_point {
+		cursor: pointer;
+		width: $starSize;
+		height: $starSize;
+		background-image: url("/icons/star_point.jpg");
+		background-repeat: no-repeat;
+		background-size: $starSize * 3;
+		overflow: hidden;
+		float: right;
+		background-position: (-$starSize * 2) 0;
+	}
+
+	input:not(:checked) ~ label:hover,
+	input:not(:checked) ~ label:hover ~ label {
+		background-position: (-$starSize) 0;
+	}
+
+	input:checked ~ label {
+		background-position: 0rem 0;
+	}
+
+	input:checked ~ form {
+		display: block;
+	}
+}
+
+.text_wrap {
+	margin-top: 3rem;
+
+	@include MOBILE {
+		padding: 0 1rem;
+	}
+
+	.label {
+		font-size: 0.8rem;
+		color: $gray4;
+		margin-bottom: 0.2rem;
+	}
+
+	.textarea {
+		height: 40vh;
+
+		&.placeholder {
+			color: $gray4;
+		}
+	}
+
+	.write_btn {
+		margin-top: 1rem;
+	}
+}
+
+.no_review_box {
+	width: 100%;
+	height: calc(100vh - 25rem);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	p {
+		color: $gray3;
+		margin-top: 5rem;
+		font-size: 1.2rem;
+	}
+}

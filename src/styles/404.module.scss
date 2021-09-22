@@ -1,0 +1,30 @@
+@import "Variable.scss";
+
+.wrap {
+	width: 100%;
+	height: calc(100vh - 7rem);
+	margin-top: $headerSize;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	flex-direction: column;
+	padding: 0 1.5rem;
+}
+
+.text {
+	font-family: $gsans;
+	font-size: 1.65rem;
+	color: $main;
+}
+
+.info {
+	color: $gray5;
+	margin-top: 1rem;
+}
+
+.home {
+	@include borderButton;
+	width: 14rem;
+	margin-top: 2rem;
+}

@@ -1,0 +1,88 @@
+[
+  {
+    "name": "시설규모",
+    "id": 0,
+    "query": "scaleFilter",
+    "subOption": [
+      {
+        "name": "소형",
+        "value": 1,
+        "id": 0
+      },
+      {
+        "name": "중소형",
+        "value": 2,
+        "id": 1
+      },
+      {
+        "name": "중형",
+        "value": 3,
+        "id": 2
+      },
+      {
+        "name": "중대형",
+        "value": 4,
+        "id": 3
+      },
+      {
+        "name": "대형",
+        "value": 5,
+        "id": 4
+      }
+    ]
+  },
+  {
+    "name": "평가등급",
+    "id": 1,
+    "query": "gradeFilter",
+    "subOption": [
+      {
+        "name": "A등급",
+        "value": "A",
+        "id": 0
+      },
+      {
+        "name": "B등급",
+        "value": "B",
+        "id": 1
+      },
+      {
+        "name": "C등급",
+        "value": "C",
+        "id": 2
+      },
+      {
+        "name": "D등급",
+        "value": "D",
+        "id": 3
+      },
+      {
+        "name": "E등급",
+        "value": "E",
+        "id": 4
+      }
+    ]
+  },
+  {
+    "name": "프로그램",
+    "id": 2,
+    "query": "programFilter",
+    "subOption": [
+      {
+        "name": "인지기능 향상",
+        "value": 1,
+        "id": 0
+      },
+      {
+        "name": "운동 보조",
+        "value": 2,
+        "id": 1
+      },
+      {
+        "name": "기타 프로그램",
+        "value": 3,
+        "id": 2
+      }
+    ]
+  }
+]

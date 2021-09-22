@@ -1,0 +1,341 @@
+[
+	{
+		"name": "시설규모",
+		"id": 0,
+		"query": "scaleFilter",
+		"subOption": [
+			{
+				"id": 0,
+				"name": "소형",
+				"value": "소형",
+				"query": "scaleFilter"
+			},
+			{
+				"id": 1,
+				"name": "중소형",
+				"value": "중소형",
+				"query": "scaleFilter"
+			},
+			{
+				"id": 2,
+				"name": "중형",
+				"value": "중형",
+				"query": "scaleFilter"
+			},
+			{
+				"id": 3,
+				"name": "중대형",
+				"value": "중대형",
+				"query": "scaleFilter"
+			},
+			{
+				"id": 4,
+				"name": "대형",
+				"value": "대형",
+				"query": "scaleFilter"
+			}
+		]
+	},
+	{
+		"name": "평가등급",
+		"id": 1,
+		"query": "gradeFilter",
+		"subOption": [
+			{
+				"id": 6,
+				"name": "1등급",
+				"value": "1",
+				"query": "gradeFilter"
+			},
+			{
+				"id": 7,
+				"name": "2등급",
+				"value": "2",
+				"query": "gradeFilter"
+			},
+			{
+				"id": 8,
+				"name": "3등급",
+				"value": "3",
+				"query": "gradeFilter"
+			},
+			{
+				"id": 9,
+				"name": "4등급",
+				"value": "4",
+				"query": "gradeFilter"
+			},
+			{
+				"id": 10,
+				"name": "5등급",
+				"value": "5",
+				"query": "gradeFilter"
+			}
+		]
+	},
+	{
+		"name": "전문과목",
+		"id": 2,
+		"query": "subjectFilter",
+		"subOption": [
+			{
+				"id": 11,
+				"name": "내과",
+				"value": "1",
+				"query": "subjectFilter"
+			},
+			{
+				"id": 12,
+				"name": "신경과",
+				"value": "2",
+				"query": "subjectFilter"
+			},
+			{
+				"id": 13,
+				"name": "정신건강의학과",
+				"value": "3",
+				"query": "subjectFilter"
+			},
+			{
+				"id": 14,
+				"name": "외과",
+				"value": "4",
+				"query": "subjectFilter"
+			},
+			{
+				"id": 15,
+				"name": "정형외과",
+				"value": "5",
+				"query": "subjectFilter"
+			},
+			{
+				"id": 16,
+				"name": "신경외과",
+				"value": "6",
+				"query": "subjectFilter"
+			},
+			{
+				"id": 17,
+				"name": "흉부외과",
+				"value": "7",
+				"query": "subjectFilter"
+			},
+			{
+				"id": 18,
+				"name": "성형외과",
+				"value": "8",
+				"query": "subjectFilter"
+			},
+			{
+				"id": 19,
+				"name": "마취통증의학과",
+				"value": "9",
+				"query": "subjectFilter"
+			},
+			{
+				"id": 20,
+				"name": "산부인과",
+				"value": "10",
+				"query": "subjectFilter"
+			},
+			{
+				"id": 22,
+				"name": "안과",
+				"value": "12",
+				"query": "subjectFilter"
+			},
+			{
+				"id": 23,
+				"name": "이비인후과",
+				"value": "13",
+				"query": "subjectFilter"
+			},
+			{
+				"id": 24,
+				"name": "피부과",
+				"value": "14",
+				"query": "subjectFilter"
+			},
+			{
+				"id": 25,
+				"name": "비뇨의학과",
+				"value": "15",
+				"query": "subjectFilter"
+			},
+			{
+				"id": 26,
+				"name": "영상의학과",
+				"value": "16",
+				"query": "subjectFilter"
+			},
+			{
+				"id": 27,
+				"name": "방사선종양학과",
+				"value": "17",
+				"query": "subjectFilter"
+			},
+			{
+				"id": 28,
+				"name": "병리과",
+				"value": "18",
+				"query": "subjectFilter"
+			},
+			{
+				"id": 29,
+				"name": "진단검사의학과",
+				"value": "19",
+				"query": "subjectFilter"
+			},
+			{
+				"id": 30,
+				"name": "결핵과",
+				"value": "20",
+				"query": "subjectFilter"
+			},
+			{
+				"id": 31,
+				"name": "재활의학과",
+				"value": "21",
+				"query": "subjectFilter"
+			},
+			{
+				"id": 32,
+				"name": "핵의학과",
+				"value": "22",
+				"query": "subjectFilter"
+			},
+			{
+				"id": 33,
+				"name": "가정의학과",
+				"value": "23",
+				"query": "subjectFilter"
+			},
+			{
+				"id": 34,
+				"name": "응급의학과",
+				"value": "24",
+				"query": "subjectFilter"
+			},
+			{
+				"id": 35,
+				"name": "직업환경의학과",
+				"value": "25",
+				"query": "subjectFilter"
+			},
+			{
+				"id": 36,
+				"name": "예방의학과",
+				"value": "26",
+				"query": "subjectFilter"
+			},
+			{
+				"id": 37,
+				"name": "치과",
+				"value": "49",
+				"query": "subjectFilter"
+			},
+			{
+				"id": 38,
+				"name": "치과보철과",
+				"value": "51",
+				"query": "subjectFilter"
+			},
+			{
+				"id": 39,
+				"name": "치과교정과",
+				"value": "52",
+				"query": "subjectFilter"
+			},
+			{
+				"id": 41,
+				"name": "치주과",
+				"value": "54",
+				"query": "subjectFilter"
+			},
+			{
+				"id": 42,
+				"name": "치과보존과",
+				"value": "55",
+				"query": "subjectFilter"
+			},
+			{
+				"id": 43,
+				"name": "구강내과",
+				"value": "56",
+				"query": "subjectFilter"
+			},
+			{
+				"id": 44,
+				"name": "구강악안면외과",
+				"value": "50",
+				"query": "subjectFilter"
+			},
+			{
+				"id": 45,
+				"name": "영상치의학과",
+				"value": "57",
+				"query": "subjectFilter"
+			},
+			{
+				"id": 46,
+				"name": "구강병리과",
+				"value": "58",
+				"query": "subjectFilter"
+			},
+			{
+				"id": 47,
+				"name": "예방치과",
+				"value": "59",
+				"query": "subjectFilter"
+			},
+			{
+				"id": 48,
+				"name": "한방내과",
+				"value": "80",
+				"query": "subjectFilter"
+			},
+			{
+				"id": 49,
+				"name": "한방부인과",
+				"value": "81",
+				"query": "subjectFilter"
+			},
+			{
+				"id": 51,
+				"name": "한방안·이비인후·피부과",
+				"value": "83",
+				"query": "subjectFilter"
+			},
+			{
+				"id": 52,
+				"name": "한방신경정신과",
+				"value": "84",
+				"query": "subjectFilter"
+			},
+			{
+				"id": 53,
+				"name": "침구과",
+				"value": "85",
+				"query": "subjectFilter"
+			},
+			{
+				"id": 54,
+				"name": "한방재활의학과",
+				"value": "86",
+				"query": "subjectFilter"
+			},
+			{
+				"id": 55,
+				"name": "사상체질과",
+				"value": "87",
+				"query": "subjectFilter"
+			},
+			{
+				"id": 56,
+				"name": "한방응급",
+				"value": "88",
+				"query": "subjectFilter"
+			}
+		]
+	}
+]

@@ -1,0 +1,127 @@
+@import "src/styles/Variable.scss";
+
+.care_intro_wrap {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+}
+
+.care_intro_box {
+	position: relative;
+	z-index: 90;
+	padding: 1.5rem;
+	background: #fff;
+	border-radius: 0.5rem;
+	max-width: $widthLimit;
+	height: calc(100vh - 4rem);
+	margin-top: 2rem;
+	overflow-y: auto;
+
+	.close_btn {
+		@include closeBtn(1.25rem, 1.5rem);
+
+		@include MOBILE {
+			@include closeBtn(1.25rem, 1.2rem);
+		}
+	}
+
+	@include MOBILE {
+		padding: 1rem;
+		margin-top: 1rem;
+		max-width: calc(100% - 2rem);
+		height: calc(100vh - 8rem);
+	}
+
+	.title {
+		font-weight: 500;
+		font-family: $gsans;
+		font-size: 1.2rem;
+		line-height: 1.2;
+		max-width: 80%;
+		margin-bottom: 0.5rem;
+		color: $main;
+
+		@include MOBILE {
+			margin-bottom: 1rem;
+		}
+	}
+
+	.icon {
+		@include categoryIcon(4rem);
+		transform: translateY(0);
+		margin-right: 0.5rem;
+
+		@include MOBILE {
+			transform: translateY(-0.3rem);
+		}
+	}
+
+	.intro_box {
+		border-bottom: 1px solid $gray2;
+		padding-bottom: 2rem;
+		margin-bottom: 1.5rem;
+		padding-top: 0.25rem;
+
+		&.last {
+			border-bottom: none;
+			padding-bottom: 0;
+			margin-bottom: 0;
+		}
+	}
+
+	.intro_flex {
+		display: flex;
+		flex-wrap: wrap;
+
+		@include MOBILE {
+			display: block;
+		}
+	}
+
+	.introduce {
+		margin-top: 0.5rem;
+		display: flex;
+		align-items: center;
+		width: 50%;
+
+		@include MOBILE {
+			width: 100%;
+		}
+	}
+
+	.name {
+		font-size: 0.75rem;
+		font-weight: 600;
+		margin-top: 0.3rem;
+	}
+
+	.intro_text {
+		font-size: 0.75rem;
+		line-height: 1.6;
+		width: calc(100% - 4.5rem);
+	}
+
+	.close {
+		width: 100%;
+		text-align: center;
+		border: 1px solid $gray3;
+		border-radius: 0.3rem;
+		font-size: 1rem;
+		margin-top: 4rem;
+		height: 3rem;
+		line-height: 3rem;
+		cursor: pointer;
+	}
+}
+
+.bg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: $backOpacity;
+}

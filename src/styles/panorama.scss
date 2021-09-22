@@ -1,0 +1,79 @@
+@import "Variable.scss";
+
+.pnlm-controls-container {
+	display: flex;
+	top: auto !important;
+	left: auto !important;
+	bottom: 0.75rem !important;
+	right: 0.75rem !important;
+	opacity: 0.95;
+
+	@include MOBILE {
+		transform: scale(0.8);
+		transform-origin: right bottom;
+	}
+
+	.pnlm-zoom-controls {
+		display: flex !important;
+		width: auto;
+		height: auto;
+		background: none;
+		border: none;
+	}
+
+	.pnlm-zoom-in {
+		position: static;
+		width: 5rem;
+		height: 2.5rem;
+		background: url("/icons/panorama_zoom.jpg") left center no-repeat;
+		background-size: 10rem;
+		border-radius: 0.35rem;
+		border: 1px solid $gray4;
+
+		@include MOBILE {
+			display: none;
+		}
+	}
+
+	.pnlm-zoom-out {
+		position: static;
+		width: 5rem;
+		height: 2.5rem;
+		background: url("/icons/panorama_zoom.jpg") right center no-repeat;
+		background-size: 10rem;
+		border-radius: 0.35rem;
+		border: 1px solid $gray4;
+		margin-left: 0.5rem;
+
+		@include MOBILE {
+			display: none;
+		}
+	}
+
+	.pnlm-fullscreen-toggle-button {
+		width: 8.5rem !important;
+		height: 2.5rem !important;
+		margin-left: 0.5rem;
+		background: url("/icons/panorama_max.jpg") !important;
+		background-size: cover !important;
+		border-radius: 0.35rem !important;
+
+		&.pnlm-fullscreen-toggle-button-active {
+			background-position: 0 7.8rem !important;
+
+			@include MOBILE {
+				background-position: 0 2.8rem !important;
+			}
+		}
+
+		@include MOBILE {
+			margin-left: 0;
+			width: 9rem !important;
+			height: 2.8rem !important;
+		}
+	}
+}
+
+.pnlm-compass {
+	display: none !important;
+}

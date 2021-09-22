@@ -1,0 +1,202 @@
+@use 'sass:math';
+@import "src/styles/Variable.scss";
+
+.button_container {
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	z-index: 500;
+	transition: transform 0.3s;
+	transform: translateY(5rem);
+
+	&.mount {
+		transform: translateY(0);
+	}
+}
+
+$time: 7s;
+
+.btns_wrap {
+	width: 100%;
+	height: 4.25rem;
+	background: #fff;
+	box-shadow: 0 -0.25rem 0.5rem $shadow2;
+	border-top-left-radius: 1rem;
+	border-top-right-radius: 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 1rem;
+}
+
+.btn {
+	width: calc(50% - 0.35rem);
+	text-align: center;
+	border: 1px solid $gray;
+	height: 2.6rem;
+	line-height: 2.6rem;
+	border-radius: 0.5rem;
+	transition: all 0.2s;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	font-weight: 500;
+
+	&.call_btn {
+		border-color: $green;
+		background: $green;
+		color: #fff;
+
+		.icon {
+			display: block;
+			margin-top: 0.65rem;
+			margin-right: 0.5rem;
+			transform-origin: bottom center;
+			animation: callAnim $time math.div($time, 2) infinite forwards;
+
+			@include MOBILE {
+				margin-top: 0.35rem;
+				margin-right: 0.35rem;
+			}
+		}
+
+		.call {
+			fill: #fff;
+		}
+
+		&:hover {
+			opacity: 0.85;
+		}
+	}
+
+	&.counsel_btn {
+		border-color: $main;
+		background: $main;
+		color: #fff;
+
+		.icon {
+			display: block;
+			margin-top: 0.65rem;
+			margin-right: 0.5rem;
+			transform-origin: bottom left;
+			animation: penAnim $time infinite forwards;
+
+			@include MOBILE {
+				margin-top: 0.4rem;
+				margin-right: 0.35rem;
+			}
+		}
+
+		.pen {
+			fill: #fff;
+		}
+
+		&:hover {
+			opacity: 0.85;
+
+			.pen {
+				fill: #fff;
+			}
+		}
+
+		&.full {
+			width: 100%;
+		}
+	}
+}
+
+$penDeg: 4deg;
+$callDeg: 2deg;
+
+@keyframes penAnim {
+	0% {
+		transform: rotate(0);
+	}
+
+	40% {
+		transform: rotate(0);
+	}
+
+	43% {
+		transform: rotate($penDeg);
+	}
+
+	46% {
+		transform: rotate(-$penDeg);
+	}
+
+	49% {
+		transform: rotate($penDeg);
+	}
+
+	52% {
+		transform: rotate(-$penDeg);
+	}
+
+	55% {
+		transform: rotate($penDeg);
+	}
+
+	58% {
+		transform: rotate(-$penDeg);
+	}
+
+	61% {
+		transform: rotate(0);
+	}
+
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes callAnim {
+	0% {
+		transform: translateY(0) rotate(0);
+	}
+
+	40% {
+		transform: translateY(0) rotate(0);
+	}
+
+	43% {
+		transform: translateY(-0.2rem) rotate(0);
+	}
+
+	45% {
+		transform: translateY(-0.2rem) rotate(-$callDeg);
+	}
+
+	47% {
+		transform: translateY(-0.2rem) rotate($callDeg);
+	}
+
+	49% {
+		transform: translateY(-0.2rem) rotate(-$callDeg);
+	}
+
+	51% {
+		transform: translateY(-0.2rem) rotate($callDeg);
+	}
+
+	53% {
+		transform: translateY(-0.2rem) rotate(-$callDeg);
+	}
+
+	55% {
+		transform: translateY(-0.2rem) rotate($callDeg);
+	}
+
+	58% {
+		transform: translateY(-0.2rem) rotate(0);
+	}
+
+	61% {
+		transform: translateY(0) rotate(0);
+	}
+
+	100% {
+		transform: translateY(0) rotate(0);
+	}
+}

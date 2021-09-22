@@ -1,0 +1,45 @@
+@import "src/styles/Variable.scss";
+
+.trendy_wrap {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	padding: 0.5rem 0;
+	border-top: 1px solid $gray;
+
+	.label {
+		font-size: 0.8rem;
+		font-weight: 600;
+		width: 5rem;
+		color: $gray5;
+		opacity: 0.8;
+	}
+
+	.keyword_box {
+		height: auto;
+		width: calc(100% - 5rem);
+	}
+
+	.keyword_slide {
+		width: auto;
+		display: inline-block;
+
+		&:last-child {
+			margin-right: 2rem;
+		}
+	}
+
+	.keyword {
+		display: block;
+		font-size: 0.8rem;
+		padding: 0.35rem 0.5rem;
+		border-radius: 0.3rem;
+		background: $gray;
+		color: $green;
+		opacity: 0.85;
+	}
+
+	.hash {
+		margin-right: 0.2rem;
+	}
+}

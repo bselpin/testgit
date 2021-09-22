@@ -1,0 +1,308 @@
+[
+	{
+		"name": "시설규모",
+		"id": 0,
+		"query": "scaleFilter",
+		"subOption": [
+			{
+				"name": "소형",
+				"value": 1,
+				"id": 0
+			},
+			{
+				"name": "중소형",
+				"value": 2,
+				"id": 1
+			},
+			{
+				"name": "중형",
+				"value": 3,
+				"id": 2
+			},
+			{
+				"name": "중대형",
+				"value": 4,
+				"id": 3
+			},
+			{
+				"name": "대형",
+				"value": 5,
+				"id": 4
+			}
+		]
+	},
+	{
+		"name": "평가등급",
+		"id": 1,
+		"query": "gradeFilter",
+		"subOption": [
+			{
+				"name": "1등급",
+				"value": 1,
+				"id": 0,
+				"query": "gradeFilter"
+			},
+			{
+				"name": "2등급",
+				"value": 2,
+				"id": 1,
+				"query": "gradeFilter"
+			},
+			{
+				"name": "3등급",
+				"value": 3,
+				"id": 2,
+				"query": "gradeFilter"
+			},
+			{
+				"name": "4등급",
+				"value": 4,
+				"id": 3,
+				"query": "gradeFilter"
+			},
+			{
+				"name": "5등급",
+				"value": 5,
+				"id": 4,
+				"query": "gradeFilter"
+			}
+		]
+	},
+	{
+		"name": "진료과목",
+		"id": 2,
+		"query": "subjectFilter",
+		"subOption": [
+			{
+				"name": "내과",
+				"query": "",
+				"id": 8
+			},
+			{
+				"name": "신경과",
+				"query": "",
+				"id": 9
+			},
+			{
+				"name": "정신건강의학과",
+				"query": "",
+				"id": 10
+			},
+			{
+				"name": "외과",
+				"query": "",
+				"id": 11
+			},
+			{
+				"name": "정형외과",
+				"query": "",
+				"id": 12
+			},
+			{
+				"name": "신경외과",
+				"query": "",
+				"id": 13
+			},
+			{
+				"name": "흉부외과",
+				"query": "",
+				"id": 14
+			},
+			{
+				"name": "성형외과",
+				"query": "",
+				"id": 15
+			},
+			{
+				"name": "마취통증의학과",
+				"query": "",
+				"id": 16
+			},
+			{
+				"name": "산부인과",
+				"query": "",
+				"id": 17
+			},
+			{
+				"name": "소아청소년과",
+				"query": "",
+				"id": 18
+			},
+			{
+				"name": "안과",
+				"query": "",
+				"id": 19
+			},
+			{
+				"name": "이비인후과",
+				"query": "",
+				"id": 20
+			},
+			{
+				"name": "피부과",
+				"query": "",
+				"id": 21
+			},
+			{
+				"name": "비뇨의학과",
+				"query": "",
+				"id": 22
+			},
+			{
+				"name": "영상의학과",
+				"query": "",
+				"id": 23
+			},
+			{
+				"name": "방사선종양학과",
+				"query": "",
+				"id": 24
+			},
+			{
+				"name": "병리과",
+				"query": "",
+				"id": 25
+			},
+			{
+				"name": "진단검사의학과",
+				"query": "",
+				"id": 26
+			},
+			{
+				"name": "결핵과",
+				"query": "",
+				"id": 27
+			},
+			{
+				"name": "재활의학과",
+				"query": "",
+				"id": 28
+			},
+			{
+				"name": "핵의학과",
+				"query": "",
+				"id": 29
+			},
+			{
+				"name": "가정의학과",
+				"query": "",
+				"id": 30
+			},
+			{
+				"name": "응급의학과",
+				"query": "",
+				"id": 31
+			},
+			{
+				"name": "직업환경의학과",
+				"query": "",
+				"id": 32
+			},
+			{
+				"name": "예방의학과",
+				"query": "",
+				"id": 33
+			},
+			{
+				"name": "치과",
+				"query": "",
+				"id": 34
+			},
+			{
+				"name": "치과보철과",
+				"query": "",
+				"id": 35
+			},
+			{
+				"name": "치과교정과",
+				"query": "",
+				"id": 36
+			},
+			{
+				"name": "소아치과",
+				"query": "",
+				"id": 37
+			},
+			{
+				"name": "치주과",
+				"query": "",
+				"id": 38
+			},
+			{
+				"name": "치과보존과",
+				"query": "",
+				"id": 39
+			},
+			{
+				"name": "구강내과",
+				"query": "",
+				"id": 40
+			},
+			{
+				"name": "구강악안면외과",
+				"query": "",
+				"id": 41
+			},
+			{
+				"name": "영상치의학과",
+				"query": "",
+				"id": 42
+			},
+			{
+				"name": "구강병리과",
+				"query": "",
+				"id": 43
+			},
+			{
+				"name": "예방치과",
+				"query": "",
+				"id": 44
+			},
+			{
+				"name": "한방내과",
+				"query": "",
+				"id": 45
+			},
+			{
+				"name": "한방부인과",
+				"query": "",
+				"id": 46
+			},
+			{
+				"name": "한방소아과",
+				"query": "",
+				"id": 47
+			},
+			{
+				"name": "한방안·이비인후·피부과",
+				"query": "",
+				"id": 48
+			},
+			{
+				"name": "한방신경정신과",
+				"query": "",
+				"id": 49
+			},
+			{
+				"name": "침구과",
+				"query": "",
+				"id": 50
+			},
+			{
+				"name": "한방재활의학과",
+				"query": "",
+				"id": 51
+			},
+			{
+				"name": "사상체질과",
+				"query": "",
+				"id": 52
+			},
+			{
+				"name": "한방응급",
+				"query": "",
+				"id": 53
+			}
+		]
+	}
+]

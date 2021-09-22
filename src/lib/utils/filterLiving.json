@@ -1,0 +1,64 @@
+[
+	{
+		"name": "평가등급",
+		"id": 1,
+		"query": "gradeFilter",
+		"subOption": [
+			{
+				"id": 5,
+				"name": "A등급",
+				"value": "A",
+				"query": "gradeFilter"
+			},
+			{
+				"id": 6,
+				"name": "B등급",
+				"value": "B",
+				"query": "gradeFilter"
+			},
+			{
+				"id": 7,
+				"name": "C등급",
+				"value": "C",
+				"query": "gradeFilter"
+			},
+			{
+				"id": 8,
+				"name": "D등급",
+				"value": "D",
+				"query": "gradeFilter"
+			},
+			{
+				"id": 9,
+				"name": "E등급",
+				"value": "E",
+				"query": "gradeFilter"
+			}
+		]
+	},
+	{
+		"name": "프로그램",
+		"id": 2,
+		"query": "programFilter",
+		"subOption": [
+			{
+				"id": 10,
+				"name": "인지기능 향상",
+				"value": "1",
+				"query": "programFilter"
+			},
+			{
+				"id": 11,
+				"name": "운동 보조",
+				"value": "2",
+				"query": "programFilter"
+			},
+			{
+				"id": 12,
+				"name": "기타 프로그램",
+				"value": "3",
+				"query": "programFilter"
+			}
+		]
+	}
+]

@@ -1,0 +1,148 @@
+@import "Variable.scss";
+
+.bizintro_wrap {
+	padding-top: 4rem;
+}
+
+.panorama_wrap {
+	position: relative;
+}
+
+.panorama_label {
+	position: absolute;
+	z-index: 50;
+	top: 0;
+	right: 0;
+	padding: 0.5rem 1.85rem;
+	background: $hecton;
+	color: #fff;
+
+	border-bottom-left-radius: 1rem;
+
+	@include MOBILE {
+		padding: 0.3rem 1.2rem;
+		font-size: 0.85rem;
+	}
+}
+
+.intro_box {
+	text-align: center;
+	width: 60%;
+	margin: 0 auto 3rem;
+
+	@include MOBILE {
+		padding: 0 1rem 0;
+		width: 90%;
+	}
+
+	.panorama_icon {
+		width: 7rem;
+		height: 4.5rem;
+		background: url("/icons/panorama_icon.png") center center no-repeat;
+		background-size: contain;
+		margin: 1rem auto;
+
+		@include MOBILE {
+			width: 5rem;
+			height: 3rem;
+		}
+	}
+
+	.title {
+		font-family: $gsans;
+		font-size: 1.6rem;
+		font-weight: 700;
+		line-height: 1.2;
+
+		@include MOBILE {
+			font-size: 1.35rem;
+			width: 66%;
+			margin: 0 auto;
+		}
+	}
+
+	.praise {
+		color: $red;
+		display: inline-block;
+		font-size: 1.1rem;
+		padding: 0.6rem 1.2rem;
+		margin: 0.5rem 0 1rem;
+		border-top: 1px solid $gray2;
+		border-bottom: 1px solid $gray2;
+	}
+
+	.free {
+		position: relative;
+
+		&:after {
+			@include psuedo;
+			width: 0.95rem;
+			height: 0.95rem;
+			background: url("/icons/free_icon.svg") center center no-repeat;
+			background-size: contain;
+			top: -0.4rem;
+			right: -0.75rem;
+
+			@include MOBILE {
+				top: -0.6rem;
+			}
+		}
+	}
+}
+
+.name {
+	display: flex;
+	align-items: center;
+	font-family: $gsans;
+	margin-bottom: 0.6rem;
+
+	@include MOBILE {
+		padding: 0 1rem;
+	}
+
+	&:hover {
+		color: $main;
+	}
+
+	.go {
+		font-size: 0.8rem;
+		border: 1px;
+		margin-left: 0.65rem;
+		border: 1px solid $gray3;
+		padding: 0.15rem 0.35rem;
+		border-radius: 0.2rem;
+	}
+}
+
+.submit_box {
+	margin-top: 1rem;
+	padding: 1.75rem 2rem 2.5rem;
+	box-shadow: 0 -0.45rem 0.6rem $shadow;
+	border-top-left-radius: 1.5rem;
+	border-top-right-radius: 1.5rem;
+	text-align: center;
+
+	@include MOBILE {
+		padding: 1.75rem 1rem 2.5rem;
+	}
+
+	.info {
+		width: 60%;
+		margin: 0 auto;
+
+		@include MOBILE {
+			width: 90%;
+		}
+	}
+
+	.link {
+		@include button;
+		margin-top: 1.5rem;
+		background: $biz;
+
+		&:hover {
+			background: $biz;
+			opacity: 0.85;
+		}
+	}
+}

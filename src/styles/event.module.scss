@@ -1,0 +1,71 @@
+@import "Variable.scss";
+
+.event_wrap {
+	margin-top: $headerSize;
+}
+
+.event_img_box {
+	position: relative;
+
+	img {
+		display: block;
+	}
+}
+
+.link {
+	position: absolute;
+	background: $black;
+	left: 50%;
+	bottom: 7rem;
+	transform: translateX(-50%);
+	padding: 1.1rem 2.5rem 0.9rem;
+	font-size: 1.65rem;
+	white-space: nowrap;
+	display: block;
+	font-family: $gsans;
+	font-weight: 700;
+	color: #fff;
+	border-radius: 0.7rem;
+	box-shadow: 0 0.5rem 0.5rem $shadow2;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+
+	span {
+		font-weight: 700;
+		color: $yellow;
+	}
+
+	.arrow {
+		font-size: 1rem;
+		margin-left: 0.5rem;
+		color: #fff;
+		font-family: $spoqa;
+		transform: translateY(-0.2rem);
+	}
+
+	@include MOBILE {
+		bottom: 3.25rem;
+		font-size: 1.15rem;
+		padding: 0.9rem 1.5rem 0.7rem;
+		gap: 0.3rem;
+	}
+
+	&.lan {
+		background: $yellow;
+		color: $black;
+		bottom: 7rem;
+
+		@include MOBILE {
+			bottom: 3rem;
+		}
+
+		span {
+			color: $main;
+		}
+	}
+
+	&.power {
+		background: $main;
+	}
+}

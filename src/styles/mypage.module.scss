@@ -1,0 +1,57 @@
+@import "Variable.scss";
+
+.mypage_wrap {
+	padding-top: 3rem;
+	position: fixed;
+	background: #fff;
+	z-index: 95;
+	width: 100%;
+	top: 0;
+	left: 0;
+	box-shadow: 0 0.2rem 0.3rem $shadow;
+
+	@include MOBILE {
+		padding-left: 1rem;
+	}
+}
+
+.mypage_list_wrap {
+	padding-top: 6rem;
+	padding-bottom: 6rem;
+
+	@include MOBILE {
+		padding: 6rem 1rem 0;
+	}
+}
+
+.mypage_list_box {
+	display: block;
+	border-bottom: 1px solid $gray2;
+	padding: 1rem 0;
+
+	&:last-child {
+		border: none;
+	}
+
+	.title {
+		font-size: 0.9rem;
+		font-weight: 600;
+	}
+
+	.info_box {
+		font-size: 0.7rem;
+		color: $gray4;
+		margin-top: 0.2rem;
+	}
+
+	.divider {
+		font-size: 0.5rem;
+		margin: 0 0.35rem;
+	}
+
+	.text {
+		max-width: 100%;
+		font-size: 0.8rem;
+		margin-top: 0.4rem;
+	}
+}

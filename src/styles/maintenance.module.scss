@@ -1,0 +1,54 @@
+@import "Variable.scss";
+
+.main_wrap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	padding: 1rem 8vw;
+
+	.icon {
+		width: 2.75rem;
+		display: block;
+		margin-left: 4rem;
+	}
+
+	.title {
+		font-family: $gsans;
+		font-size: 1.5rem;
+		margin-top: 0;
+
+		span {
+			font-weight: 500;
+			color: $main;
+		}
+	}
+
+	.text {
+		p {
+			margin-top: 0.75rem;
+			font-size: 0.9rem;
+			color: $gray4;
+		}
+
+		.bold {
+			font-weight: 600;
+			color: $black;
+		}
+	}
+
+	.time_box {
+		padding: 0.5rem 1rem;
+		background: $gray;
+		border-radius: 0.5rem;
+		margin: 1.5rem 0;
+
+		span {
+			font-weight: 400;
+		}
+
+		p {
+			line-height: 2;
+		}
+	}
+}

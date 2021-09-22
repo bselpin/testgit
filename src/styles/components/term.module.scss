@@ -1,0 +1,95 @@
+@import "src/styles/Variable.scss";
+
+.term_wrap {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	background: $backOpacity;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&.no_bg {
+		background: #fff;
+	}
+
+	.term_box {
+		width: 100%;
+		max-width: 900px;
+		background: #fff;
+		border-radius: 0.5rem;
+		position: relative;
+		height: 90vh;
+		overflow: hidden;
+
+		@include MOBILE {
+			height: 100vh;
+			border-radius: 0;
+		}
+	}
+
+	h2 {
+		font-size: 1.2rem;
+		border-bottom: 1px solid $gray4;
+		padding-bottom: 1rem;
+		position: absolute;
+		width: 100%;
+		left: 0;
+		top: 1rem;
+		padding-left: 1rem;
+		background: #fff;
+		z-index: 5;
+	}
+
+	h3 {
+		font-size: 1rem;
+		margin-top: 1.1rem;
+		line-height: 1.7;
+	}
+
+	.close_btn {
+		@include closeBtn(1.25rem, 1.1rem);
+		z-index: 99;
+	}
+
+	.term_content {
+		height: calc(100% - 3.5rem);
+		font-size: 1.5rem;
+		margin-top: 3.5rem;
+		font-weight: 300;
+		overflow-y: auto;
+		padding: 1rem 1rem;
+		padding-top: 0rem;
+		padding-right: 4rem;
+		padding-bottom: 10rem;
+		line-height: 1.8;
+
+		@include MOBILE {
+			padding-right: 2rem;
+		}
+
+		p {
+			font-size: 0.85rem;
+			margin-top: 1rem;
+		}
+
+		.nm {
+			margin-top: 0;
+		}
+	}
+
+	.close_fixed {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		text-align: center;
+		padding: 1.1rem;
+		background: $gray6;
+		cursor: pointer;
+		color: #fff;
+		font-weight: 500;
+	}
+}

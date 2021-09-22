@@ -1,0 +1,138 @@
+@import "src/styles/Variable.scss";
+
+.footer {
+	margin-top: 3.5rem;
+	border-top: 1px solid $gray2;
+	padding: 1.5rem 0 15rem;
+
+	@include MOBILE {
+		padding: 1.5rem 1.25rem 12rem;
+	}
+
+	.util_box {
+		font-size: 0.7rem;
+		color: $gray5;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.util_btn {
+		margin-right: 1rem;
+		margin-bottom: 0.75rem;
+		cursor: pointer;
+	}
+
+	.company_box {
+		padding-top: 1.5rem;
+
+		@include MOBILE {
+			padding-top: 1rem;
+		}
+
+		img {
+			width: 6rem;
+		}
+	}
+
+	.info {
+		padding-left: 0;
+		padding-top: 0.75rem;
+		padding-right: 4rem;
+
+		p {
+			font-size: 0.7rem;
+			color: $gray5;
+		}
+
+		@include MOBILE {
+			padding-right: 1rem;
+		}
+	}
+
+	.hecton_box {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.sns_box {
+		display: flex;
+		transform: translateY(-0.2rem);
+	}
+
+	.link_icon {
+		$size: 2.1rem;
+		display: block;
+		width: $size;
+		height: $size;
+		border-radius: 50%;
+		border: 1px solid $gray3;
+		background: url("/icons/footer_sns.svg");
+		background-size: $size * 4;
+		opacity: 0.7;
+		margin-left: 0.5rem;
+
+		&:hover {
+			opacity: 1;
+		}
+
+		&.kakao {
+			background-position: 0 0;
+		}
+
+		&.naver {
+			background-position: -($size) 0;
+		}
+
+		&.insta {
+			background-position: -($size * 2) 0;
+		}
+
+		&.facebook {
+			background-position: -($size * 3) 0;
+		}
+	}
+
+	.family_box {
+		margin-top: 1.5rem;
+
+		.label {
+			font-size: 0.7rem;
+			font-weight: 600;
+		}
+	}
+
+	.logo_box {
+		display: flex;
+		align-items: center;
+	}
+
+	.logo {
+		display: block;
+		width: 7rem;
+		height: 2.8rem;
+		margin-right: 1rem;
+
+		&.gch {
+			background: url("/logo/gch.png") center center no-repeat;
+			background-size: contain;
+		}
+
+		&.gcw {
+			background: url("/logo/gcw.png") center center no-repeat;
+			background-size: contain;
+		}
+
+		&.ub {
+			width: 4.5rem;
+			background: url("/logo/ub.png") center center no-repeat;
+			background-size: contain;
+		}
+
+		&.bbros {
+			width: 4.5rem;
+			background: url("/logo/bbros.png") center center no-repeat;
+			background-size: contain;
+		}
+	}
+}

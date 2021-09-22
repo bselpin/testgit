@@ -1,0 +1,212 @@
+@import "Variable.scss";
+
+.login_wrap {
+	width: 60%;
+	margin: 6rem auto;
+
+	@include MOBILE {
+		width: 88%;
+		margin: 4.5rem auto;
+		padding: 0 1rem;
+	}
+}
+
+.input_box {
+	margin: 2.5rem 0 0.75rem;
+	position: relative;
+}
+
+.label {
+	font-size: 0.9rem;
+	font-family: $gsans;
+	position: absolute;
+	top: -0.65rem;
+	transform-origin: left;
+	transition: transform 0.2s;
+}
+
+.util_box {
+	text-align: right;
+	font-size: 0.85rem;
+	color: $gray4;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 2rem;
+
+	.to_sign {
+		color: $main;
+		font-weight: 700;
+	}
+}
+
+.login_input {
+	padding: 0.5rem 0;
+	font-size: 1.25rem;
+	border-radius: 0;
+	border: none;
+	border-bottom: 1px solid $gray4;
+
+	&:focus ~ label {
+		color: $main;
+	}
+}
+
+.sns_wrap {
+	border-top: 1px solid $gray3;
+	margin-top: 1.2rem;
+	padding-top: 1rem;
+}
+
+.sns_login {
+	width: 100%;
+	text-align: center;
+	padding: 0.5rem 1rem;
+	display: block;
+	align-items: center;
+	margin: 1rem 0;
+	cursor: pointer;
+	transition: all 0.2s;
+
+	&:hover {
+		opacity: 0.8;
+	}
+
+	.text {
+		width: 100%;
+		text-align: center;
+		margin-left: 1rem;
+		line-height: 1.95;
+	}
+
+	strong {
+		position: relative;
+	}
+
+	&.kakao {
+		border-radius: 0.3rem;
+		background-color: $kakao;
+		text-align: center;
+
+		strong {
+			position: relative;
+		}
+
+		.logo {
+			position: absolute;
+			width: 2rem;
+			height: 2rem;
+			left: -2.5rem;
+			background-image: url("/icons/sns_icon.svg");
+			background-repeat: no-repeat;
+			background-position: -2rem center;
+			background-size: 4rem;
+		}
+	}
+
+	&.naver {
+		border-radius: 0.3rem;
+		background-color: $naver;
+		color: #fff;
+		text-align: center;
+
+		.logo {
+			position: absolute;
+			width: 2rem;
+			height: 2rem;
+			left: -2.5rem;
+			background-image: url("/icons/sns_icon.svg");
+			background-repeat: no-repeat;
+			background-position: 0 center;
+			background-size: 4rem;
+		}
+	}
+}
+
+.sns_info {
+	text-align: center;
+	font-size: 0.8rem;
+}
+
+.login_btn {
+	width: 100%;
+	text-align: center;
+
+	&.failed {
+		animation: failed ease-out 3s forwards;
+		background: $red;
+	}
+}
+
+.to_biz {
+	text-align: center;
+	font-size: 0.8rem;
+	padding-top: 0.75rem;
+
+	.info {
+		font-size: 0.8rem;
+		color: $gray4;
+		margin-bottom: 0.2rem;
+		font-weight: 500;
+	}
+
+	a {
+		color: $main;
+		text-decoration: underline;
+	}
+}
+
+.login_type_info {
+	text-align: center;
+	font-size: 0.8rem;
+	color: $gray4;
+
+	strong {
+		color: $gray5;
+	}
+}
+
+@keyframes failed {
+	0% {
+		transform: translate3d(0.25rem, 0, 0);
+	}
+
+	2% {
+		transform: translate3d(-0.3rem, 0, 0);
+	}
+
+	4% {
+		transform: translate3d(0.3rem, 0, 0);
+	}
+
+	6% {
+		transform: translate3d(-0.25rem, 0, 0);
+	}
+
+	8% {
+		transform: translate3d(0.17rem, 0, 0);
+	}
+
+	10% {
+		transform: translate3d(-0.17rem, 0, 0);
+	}
+
+	12% {
+		transform: translate3d(0.1rem, 0, 0);
+	}
+
+	14% {
+		transform: translate3d(-0.1rem, 0, 0);
+	}
+
+	16% {
+		transform: translate3d(0.1rem, 0, 0);
+	}
+
+	18% {
+		transform: translate3d(0rem, 0, 0);
+	}
+
+	100% {
+		transform: translate3d(0rem, 0, 0);
+	}
+}
